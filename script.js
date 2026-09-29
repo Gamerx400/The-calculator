@@ -64,11 +64,25 @@ btnEqual.addEventListener("click",function(){
     num2 = "";
     tool = "";
     mode = "num1";
+  }else if (num1 === "0" && num2 === "0" && tool == "÷")
+  {
+    input.value = "لا يمكن حساب صفر على صفر" ;
+    num1 = "";
+    num2 = "";
+    tool = "";
+    mode = "num1";
+  }else if (num2 === "0" && tool == "÷")
+  {
+    input.value = "لايمكن حساب اي رقم على صفر ";
+    num1 = "";
+    num2 = "";
+    tool = "";
+    mode = "num1";
   }else{
  let saveNum1 = Number(num1);
  let saveNum2 = Number(num2);
   input.value = ""
-  
+    
  if (typeof saveNum1 === "number" && !isNaN(saveNum1))
  {
    if (typeof saveNum2 === "number" && !isNaN(saveNum2))

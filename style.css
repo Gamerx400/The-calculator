@@ -1,44 +1,48 @@
-/* الكود الأساسي للموبايل */
-body {
-  margin: 0;
-  padding: 0;
-  background-color: #1e1e2e;
+body{
+  background-color: #1E1E2E;
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  align-content:center;
+  
 }
-
-.calculator {
-  width: 100%;
-  max-width: 400px;
-  /* بدلاً من ارتفاع ثابت، بنخليه يتكيف */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.buttons {
+.calculator{
+  /*علشان يكونو في صف واحد(عمود)*/
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px; /* بيوزع المسافات بين الأزرار بشكل متساوي */
-}
+  grid-template-columns: auto;
+  /*علشان يملاء الشاشة*/
+  height: 86vh;
+   background-color: #2A2A3C;
+  border-radius:20px;
 
-button {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* بيخلي الأزرار مربعة ومظبوطة تلقائياً على أي شاشة */
-  font-size: 24px;
-  border-radius: 12px;
+}
+.buttons{
+  /*تقسيمة لي زراير علشان يكونو مرتبين*/
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 2px;
+  padding-left: 20px;
+  padding-right: 0px;
+}
+button{
+  /*شكل و حجم زراير و الخط*/
+  background-color:#3B3B50 ;
   border: none;
-  cursor: pointer;
+  border-radius: 7px;
+  margin: 5px;
+  width: 67%;
+  height: 10vh;
+  font-size: 43px;
+  font-weight: bold;
+  color: white;
 }
-
 #display{
+  text-align: right;
   border: none;
   outline: none;
   background-color:#2A2A3C;
   color: white;
   border-radius:20px;
-  font-size: 18px;
+  font-size: 40px;
   font-weight: bold;
 }
 .operator{
