@@ -10,7 +10,8 @@ body{
   display: grid;
   grid-template-columns: auto;
   /*علشان يملاء الشاشة*/
-  height: 86vh;
+  height: 78vh;
+  width: 100%;
    background-color: #2A2A3C;
   border-radius:20px;
 
